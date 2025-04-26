@@ -17,13 +17,13 @@ def encrypt(text, shift):
 def decrypt(cipher, shift):
 
     result = ""
-    for l in text:
+    for l in cipher:
         
         if (l.isupper()):
-            result += chr((ord(l) - shift - 65 + 1) % 26 + 65)
+            result += chr((ord(l) - shift - 65) % 26 + 65)
 
         elif (l.islower()):
-            result += chr((ord(l) - shift - 97 + 1) % 26 + 97)
+            result += chr((ord(l) - shift - 97) % 26 + 97)
 
         else:
             result+= l
